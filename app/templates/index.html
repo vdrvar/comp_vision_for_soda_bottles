@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soda Bottle Prediction</title>
+</head>
+<body>
+    <h1>SODA BOTTLE PREDICTION</h1>
+    
+    <div>
+        <a href="{{ url_for('home') }}">Home</a> |
+        <a href="{{ url_for('get_supported_classes') }}">Info</a> |
+        <a href="{{ url_for('get_stats') }}">Statistics</a>
+    </div>
+
+    <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+        <label for="images">Select image(s):</label>
+        <input type="file" name="images" id="images" accept="image/*" multiple>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+    
+    <br><br>
+    
+    <p>It has the following functionalities:</p>
+    <ol>
+        <li>A POST request to the path /predict with a sent photograph returns the probability of belonging to each of the possible classes (supporting 1 or more images).</li>
+        <li>A GET request to the path /info retrieves a list of currently supported classes that the model can currently detect.</li>
+        <li>By calling /stats, the user will receive information in JSON format about the number of successful predictions for the last 10 days for each class.</li>
+    </ol>
+</body>
+</html>

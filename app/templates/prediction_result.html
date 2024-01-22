@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Result</title>
+    <style>
+        .navigation {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <a href="{{ url_for('home') }}">Home</a> |
+        <a href="{{ url_for('get_supported_classes') }}">Info</a> |
+        <a href="{{ url_for('get_stats') }}">Statistics</a>
+    </div>
+
+    {% for filename, prediction in predictions.items() %}
+        <h2>{{ filename }}</h2>
+        <p>Predicted Class: {{ prediction.predicted_class }}</p>
+        <p>Probabilities:</p>
+        <ul>
+            {% for class_name, probability in prediction.probabilities.items() %}
+                <li>{{ class_name }}: {{ '%.4f'|format(probability|float) }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>

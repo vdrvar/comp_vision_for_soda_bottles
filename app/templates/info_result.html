@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Result</title>
+</head>
+<body>
+    <div>
+        <a href="{{ url_for('home') }}">Home</a> |
+        <a href="{{ url_for('get_supported_classes') }}">Info</a> |
+        <a href="{{ url_for('get_stats') }}">Statistics</a>
+    </div>
+
+    <h1>Supported Classes</h1>
+    <ul>
+        {% for class_name in supported_classes %}
+            <li>{{ class_name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

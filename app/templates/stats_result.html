@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Result</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .raw-json {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="{{ url_for('home') }}">Home</a> |
+        <a href="{{ url_for('get_supported_classes') }}">Info</a> |
+        <a href="{{ url_for('get_stats') }}">Statistics</a>
+    </div>
+
+    <h1>Statistics Result</h1>
+    {% for day, day_stats in stats.items() %}
+        <h2>{{ day }}</h2>
+        <table>
+            <tr>
+                <th>Class</th>
+                <th>Successful Predictions</th>
+            </tr>
+            {% for class_name, count in day_stats.items() %}
+                <tr>
+                    <td>{{ class_name }}</td>
+                    <td>{{ count }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endfor %}
+
+    <div class="raw-json">
+        <h2>Raw JSON Data</h2>
+        <pre>{{ stats | tojson(indent=2) }}</pre>
+    </div>
+</body>
+</html>
