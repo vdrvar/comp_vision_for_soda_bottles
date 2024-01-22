@@ -1,6 +1,6 @@
 # Flask Image Recognition Web Service
 
-This repository houses a Flask web service designed for image recognition, featuring a user-friendly interface, pre-trained Xception model, and statistics tracking for successful predictions. Beyond the app, it includes resources for model comparison, datasets, and auxiliary files.
+This repository houses a Flask web service designed for image recognition, featuring a user-friendly interface, pre-trained Xception model (using a transfer learning approach), and statistics tracking for successful predictions. Beyond the app, it includes resources for model comparison, datasets, and auxiliary files.
 
 ### Key Components:
 
@@ -17,7 +17,7 @@ Auxiliary Files: Various files supporting the project, including model weights, 
 ### Instructions:
 
 1) Clone the Repository:
-git clone https://github.com/your-username/flask-image-recognition.git
+git clone https://github.com/vdrvar/comp_vision_for_soda_bottles.git
 
 2) Navigate to the Project Directory:
 cd flask-image-recognition
