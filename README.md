@@ -5,15 +5,19 @@ This repository houses a Flask web service designed for image recognition, featu
 Key Components:
 
 /app Directory: Contains the Flask web service for image recognition. Users can upload images for prediction and view statistics.
+
 conv_net_comparison.ipynb: A Jupyter Notebook where two convolutional neural network architectures are compared, leading to the selection of the model used in the app.
+
 /Soda Bottles Directory: The dataset used for training and evaluation.
+
 /TVT_split Directory: Dataset split into training, validation, and test sets. Freshly split with one run of the notebook.
+
 Auxiliary Files: Various files supporting the project, including model weights, requirements.txt, and Dockerfile.
 
 1) Clone the Repository:
 git clone https://github.com/your-username/flask-image-recognition.git
 
-2)Navigate to the Project Directory:
+2) Navigate to the Project Directory:
 cd flask-image-recognition
 
 3) Build the Docker Image:
