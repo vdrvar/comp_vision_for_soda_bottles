@@ -20,7 +20,7 @@ Auxiliary Files: Various files supporting the project, including model weights, 
 git clone https://github.com/vdrvar/comp_vision_for_soda_bottles.git
 
 2) Navigate to the Project Directory:
-cd comp_vision_for_soda_bottles 
+cd comp_vision_for_soda_bottles/app
 
 3) Build the Docker Image:
 docker build -t flask-image-service .
