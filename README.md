@@ -32,10 +32,16 @@ Open http://localhost:5000 in your web browser to interact with the image recogn
 Usage:
 
 Explore the /app directory for the Flask web service.
+
 Review conv_net_comparison.ipynb for insights into the model comparison process and weight training.
+
 The /Soda Bottles directory contains the dataset used for training and evaluation.
+
 The /TVT_split directory provides the dataset split into training, validation, and test sets.
+
 Customize and extend the project as needed.
+
+
 Note:
 
 This is a development server; for production, consider using a production-ready WSGI server.
