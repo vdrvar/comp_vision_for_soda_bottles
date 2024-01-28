@@ -1,4 +1,4 @@
-# Flask Image Recognition Web Service
+# Flask Image Recognition With ConvNets
 
 This repository houses a Flask web service designed for image recognition, featuring a user-friendly interface, pre-trained Xception model (using a transfer learning approach), and statistics tracking for successful predictions. Beyond the app, it includes resources for model comparison, datasets, and auxiliary files.
 
