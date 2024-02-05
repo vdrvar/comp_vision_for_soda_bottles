@@ -12,7 +12,7 @@ conv_net_comparison.ipynb: A Jupyter Notebook where two convolutional neural net
 
 /TVT_split Directory: Dataset split into training, validation, and test sets. Freshly split with one run of the notebook.
 
-Auxiliary Files: Various files supporting the project, including model weights, requirements.txt, and Dockerfile.
+Auxiliary Files: Various files supporting the project, including model weights, requirements.txt, test photos, and Dockerfile.
 
 ### Instructions:
 
