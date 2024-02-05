@@ -15,9 +15,6 @@
             padding: 10px;
             text-align: left;
         }
-        .raw-json {
-            margin-top: 20px;
-        }
     </style>
 </head>
 <body>
@@ -33,7 +30,7 @@
         <table>
             <tr>
                 <th>Class</th>
-                <th>Successful Predictions</th>
+                <th>Successfully Executed Prediction</th>
             </tr>
             {% for class_name, count in day_stats.items() %}
                 <tr>
@@ -43,10 +40,5 @@
             {% endfor %}
         </table>
     {% endfor %}
-
-    <div class="raw-json">
-        <h2>Raw JSON Data</h2>
-        <pre>{{ stats | tojson(indent=2) }}</pre>
-    </div>
 </body>
 </html>
