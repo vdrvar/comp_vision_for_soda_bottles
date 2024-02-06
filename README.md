@@ -2,6 +2,10 @@
 
 This repository houses a Flask web service designed for image recognition, featuring a user-friendly interface, pre-trained Xception model (using a transfer learning approach), and statistics tracking for successful predictions. Beyond the app, it includes resources for model comparison, datasets, and auxiliary files.
 
+### Kaggle Dataset:
+
+For the project, we utilized the [Cola Bottle Identification Dataset on Kaggle](https://www.kaggle.com/datasets/deadskull7/cola-bottle-identification/code), which contains images of various cola bottles for training and evaluation purposes.
+
 ### Key Components:
 
 /app Directory: Contains the Flask web service for image recognition. Users can upload images for prediction and view statistics.
