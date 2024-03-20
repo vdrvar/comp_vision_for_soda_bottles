@@ -10,13 +10,13 @@ For the project, we utilized the [Cola Bottle Identification Dataset on Kaggle](
 
 /app Directory: Contains the Flask web service for image recognition. Users can upload images for prediction and view statistics.
 
-conv_net_comparison.ipynb: A Jupyter Notebook where two convolutional neural network architectures are compared, leading to the selection of the model used in the app.
+/code/conv_net_comparison.ipynb: A Jupyter Notebook where two convolutional neural network architectures are compared, leading to the selection of the model used in the app.
 
-/Soda Bottles Directory: The dataset used for training and evaluation.
+/data/Soda Bottles Directory: The dataset used for training and evaluation.
 
-/TVT_split Directory: Dataset split into training, validation, and test sets. Freshly split with one run of the notebook.
+/data/TVT_split Directory: Dataset split into training, validation, and test sets. Freshly split with one run of the notebook.
 
-Auxiliary Files: Various files supporting the project, including model weights, requirements.txt, test photos, and Dockerfile.
+/other_files: Various files supporting the project, e.g. weights and test photos.
 
 ### Instructions:
 
@@ -39,11 +39,11 @@ Open http://localhost:5000 in your web browser to interact with the image recogn
 
 Explore the /app directory for the Flask web service.
 
-Review conv_net_comparison.ipynb for insights into the model comparison process and weight training.
+Review /code/conv_net_comparison.ipynb for insights into the model comparison process and weight training.
 
-The /Soda Bottles directory contains the dataset used for training and evaluation.
+The /data/Soda Bottles directory contains the dataset used for training and evaluation.
 
-The /TVT_split directory provides the dataset split into training, validation, and test sets.
+The /data/TVT_split directory provides the dataset split into training, validation, and test sets.
 
 Customize and extend the project as needed.
 
