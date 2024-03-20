@@ -14,7 +14,7 @@ For the project, we utilized the [Cola Bottle Identification Dataset on Kaggle](
 
 /data/soda_bottles Directory: The dataset used for training and evaluation.
 
-/data/tvt_split Directory: Dataset split into training, validation, and test sets. Freshly split with one run of the notebook.
+/data/soda_bottles_tvt_split Directory: Dataset split into training, validation, and test sets. Freshly split with one run of the notebook.
 
 /other_files: Various files supporting the project, e.g. weights and test photos.
 
