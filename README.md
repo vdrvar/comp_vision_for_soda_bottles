@@ -35,6 +35,8 @@ docker run -p 5000:5000 flask-image-service
 5) Access the Web Service:
 Open http://localhost:5000 in your web browser to interact with the image recognition web service.
 
+6) Use the photos in /other_files/test_photos to test the image recognition functionality of the service.
+
 ### Usage:
 
 Explore the /app directory for the Flask web service.
