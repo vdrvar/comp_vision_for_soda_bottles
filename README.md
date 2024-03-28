@@ -35,20 +35,19 @@ Open http://localhost:5000 in your web browser to interact with the image recogn
 
 6) Use the photos in /other_files/test_photos to test the image recognition functionality of the service.
 
-### Usage:
+## Usage:
 
 The app is launched on the Home page, where you can upload an arbitrary photo:
-![image](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/f6c66c9f-dbd2-450d-b005-c22e80449041)
+![Home Page](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/f6c66c9f-dbd2-450d-b005-c22e80449041)
 
 When you click on "Predict", you get the probabilities that the bottle in the photo belongs to the respective classes:
-![image](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/229790b4-7f40-4eaa-a0ec-52deb064887f)
+![Prediction Page](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/229790b4-7f40-4eaa-a0ec-52deb064887f)
 
 You can check what classes are available on the Info page:
-![image](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/ff669aa0-847e-4b83-93d8-e43b921e798a)
+![Info Page](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/ff669aa0-847e-4b83-93d8-e43b921e798a)
 
 Finally, you can also check the prediction history from the last 10 days on the Statistics page:
-![image](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/e16b2d40-f2c2-4351-b099-b61a6705bebd)
-
+![Statistics Page](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/e16b2d40-f2c2-4351-b099-b61a6705bebd)
 
 Customize and extend the project as needed.
 
