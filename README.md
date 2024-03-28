@@ -41,6 +41,7 @@ The app is launched on the Home page, where you can upload an arbitrary photo:
 ![Home Page](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/f6c66c9f-dbd2-450d-b005-c22e80449041)
 
 When you click on "Predict", you get the probabilities that the bottle in the photo belongs to the respective classes:
+
 ![Prediction Page](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/229790b4-7f40-4eaa-a0ec-52deb064887f)
 
 You can check what classes are available on the Info page:
