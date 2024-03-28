@@ -32,7 +32,7 @@ model2 = tf.keras.Sequential(
 )
 
 # Load the weights
-model2.load_weights("model2_best_weights.h5")
+model2.load_weights("app/model2_best_weights.h5")
 model2.compile(optimizer="Adam", loss="categorical_crossentropy", metrics=["accuracy"])
 
 # Classes for prediction

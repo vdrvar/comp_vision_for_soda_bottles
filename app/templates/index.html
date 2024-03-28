@@ -4,31 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soda Bottle Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            width: 100%;
+        }
+        .functionality-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .functionality-list li {
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .functionality-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #007bff;
+        }
+    </style>
 </head>
 <body>
-    <h1>SODA BOTTLE PREDICTION</h1>
-    
-    <div>
-        <a href="{{ url_for('home') }}">Home</a> |
-        <a href="{{ url_for('get_supported_classes') }}">Info</a> |
-        <a href="{{ url_for('get_stats') }}">Statistics</a>
+    <div class="container">
+        <h1>SODA BOTTLE PREDICTION</h1>
+        
+        <div class="mb-3">
+            <a class="btn btn-secondary" href="{{ url_for('home') }}">Home</a>
+            <a class="btn btn-secondary" href="{{ url_for('get_supported_classes') }}">Info</a>
+            <a class="btn btn-secondary" href="{{ url_for('get_stats') }}">Statistics</a>
+        </div>
+
+        <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="images">Select image(s):</label>
+                <input class="form-control-file" type="file" name="images" id="images" accept="image/*" multiple>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+        
+        <br><br>
+        
+        <p>It has the following functionalities:</p>
+        <ul class="functionality-list">
+            <li>Upload a photo and get the chances of it being one of our recognized soda bottles.</li>
+            <li>Explore the list of soda bottles our system can identify.</li>
+            <li>Check recent stats on successfully executed predictions for each soda bottle over the past 10 days.</li>
+        </ul>
     </div>
-
-    <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
-        <label for="images">Select image(s):</label>
-        <input type="file" name="images" id="images" accept="image/*" multiple>
-        <br>
-        <input type="submit" value="Predict">
-    </form>
-    
-    <br><br>
-    
-    <p>It has the following functionalities:</p>
-    <ol>
-        <li>Upload a photo and get the chances of it being one of our recognized soda bottles.</li>
-        <li>Explore the list of soda bottles our system can identify.</li>
-        <li>Check recent stats on successfully executed predictions for each soda bottle over the past 10 days.</li>
-    </ol>
-
 </body>
 </html>

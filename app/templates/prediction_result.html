@@ -4,28 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Predict Result</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
         .navigation {
             margin-bottom: 20px;
+        }
+        h2 {
+            color: #007bff;
+            margin-top: 30px;
+        }
+        p {
+            margin-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        ul li:before {
+            content: "•";
+            color: #007bff;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
         }
     </style>
 </head>
 <body>
-    <div class="navigation">
-        <a href="{{ url_for('home') }}">Home</a> |
-        <a href="{{ url_for('get_supported_classes') }}">Info</a> |
-        <a href="{{ url_for('get_stats') }}">Statistics</a>
-    </div>
+    <div class="container">
+        <div class="navigation">
+            <a href="{{ url_for('home') }}">Home</a> |
+            <a href="{{ url_for('get_supported_classes') }}">Info</a> |
+            <a href="{{ url_for('get_stats') }}">Statistics</a>
+        </div>
 
-    {% for filename, prediction in predictions.items() %}
-        <h2>{{ filename }}</h2>
-        <p>Predicted Class: {{ prediction.predicted_class }}</p>
-        <p>Probabilities:</p>
-        <ul>
-            {% for class_name, probability in prediction.probabilities.items() %}
-                <li>{{ class_name }}: {{ '%.4f'|format(probability|float) }}</li>
-            {% endfor %}
-        </ul>
-    {% endfor %}
+        {% for filename, prediction in predictions.items() %}
+            <h2>{{ filename }}</h2>
+            <p>Predicted Class: {{ prediction.predicted_class }}</p>
+            <p>Probabilities:</p>
+            <ul>
+                {% for class_name, probability in prediction.probabilities.items() %}
+                    <li>{{ class_name }}: {{ '%.4f'|format(probability|float) }}</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
 </body>
 </html>
