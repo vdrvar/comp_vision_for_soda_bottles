@@ -33,10 +33,16 @@ docker run -p 5000:5000 flask-image-service
 ### How to Use:
 
 - **Home Page**: Upload a photo to see the model's prediction.
-- ![image](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/e9df039d-aa78-464e-a473-0304214536ef)
+ ![image](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/e9df039d-aa78-464e-a473-0304214536ef)
 
 - **Results**: Displays predictions with recognized soda bottle types.
+  ![image](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/c94e6502-4f7a-4f78-96c3-e9fb96b232a3)
+
 - **More Info**: Insights on recognized classes and prediction statistics.
+  ![image](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/47f033d1-756e-4025-ab44-4c7c34758ff1)
+  ![image](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/3b2fdba7-6cb8-4906-acfc-d6161e8e5484)
+
+
 
 ## Make It Your Own:
 
