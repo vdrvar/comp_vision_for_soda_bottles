@@ -1,60 +1,45 @@
-# Flask Image Recognition Web Service
+# Transfer Learning for Soda Bottle Recognition
 
-This repository houses a Flask web service designed for image recognition, featuring a user-friendly interface, pre-trained Xception model (using a transfer learning approach), and statistics tracking for successful predictions. Beyond the app, it includes resources for model comparison, datasets, and auxiliary files.
+This project demonstrates the power of transfer learning in computer vision by applying it to identifying soda bottles. We fine-tune a pre-trained Xception model to achieve high accuracy in recognizing various soda bottle brands.
 
-### Kaggle Dataset:
+## Project Overview:
 
-For the project, we utilized the [Cola Bottle Identification Dataset on Kaggle](https://www.kaggle.com/datasets/deadskull7/cola-bottle-identification/code), which contains images of various cola bottles for training and evaluation purposes.
+- **Deep Learning in Computer Vision**: Uses advanced techniques to accurately recognize soda bottle images.
+
+- **Transfer Learning Approach**: Applies the Xception model, enhanced through transfer learning, to identify soda bottles.
+
+- **Kaggle Dataset**: Trains and evaluates the model using the [Cola Bottle Identification Dataset from Kaggle](https://www.kaggle.com/datasets/deadskull7/cola-bottle-identification/code).
 
 ### Key Components:
 
-/app Directory: Contains the Flask web service for image recognition. Users can upload images for prediction and view statistics.
+- `/app`: Web interface for image upload and prediction.
+- `/code/conv_net_comparison.ipynb`: Documentation of neural network comparisons.
+- `/data/soda_bottles`: Dataset for model training and validation.
+- `/other_files`: Supplementary resources, including weights and test photos.
 
-/code/conv_net_comparison.ipynb: A Jupyter Notebook where two convolutional neural network architectures are compared, leading to the selection of the model used in the app.
+## Quick Start:
 
-/data/soda_bottles Directory: The dataset used for training and evaluation.
+1. Clone the repository:
+   `git clone https://github.com/vdrvar/comp_vision_for_soda_bottles.git`
 
-/other_files: Various files supporting the project, e.g. weights and test photos.
-
-### Instructions:
-
-1) Clone the Repository:
-git clone https://github.com/vdrvar/comp_vision_for_soda_bottles.git
-
-2) Navigate to the Project Directory:
+2. Set up the environment with Docker:
 cd comp_vision_for_soda_bottles/app
-
-3) Build the Docker Image:
 docker build -t flask-image-service .
-
-4) Run the Docker Container:
 docker run -p 5000:5000 flask-image-service
 
-5) Access the Web Service:
-Open http://localhost:5000 in your web browser to interact with the image recognition web service.
 
-6) Use the photos in /other_files/test_photos to test the image recognition functionality of the service.
+3. Access the web service at `http://localhost:5000`.
 
-## Usage:
+### How to Use:
 
-The app is launched on the Home page, where you can upload an arbitrary photo:
-![Home Page](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/f6c66c9f-dbd2-450d-b005-c22e80449041)
+- **Home Page**: Upload a photo to see the model's prediction.
+- **Results**: Displays predictions with recognized soda bottle types.
+- **More Info**: Insights on recognized classes and prediction statistics.
 
-When you click on "Predict", you get the probabilities that the bottle in the photo belongs to the respective classes:
+## Make It Your Own:
 
-![Prediction Page](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/229790b4-7f40-4eaa-a0ec-52deb064887f)
+Tweak, expand, and use this project as a base for further computer vision and transfer learning experiments.
 
-You can check what classes are available on the Info page:
-![Info Page](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/ff669aa0-847e-4b83-93d8-e43b921e798a)
+### Please Note:
 
-Finally, you can also check the prediction history from the last 10 days on the Statistics page:
-![Statistics Page](https://github.com/vdrvar/comp_vision_for_soda_bottles/assets/48907543/e16b2d40-f2c2-4351-b099-b61a6705bebd)
-
-Customize and extend the project as needed.
-
-
-### Note:
-
-This is a development server; for production, consider using a production-ready WSGI server.
-For more details on the model selection process, refer to conv_net_comparison.ipynb.
-Feel free to adjust the description and instructions based on any additional details or features you'd like to highlight.
+For development only. Check `conv_net_comparison.ipynb` for model insights.
