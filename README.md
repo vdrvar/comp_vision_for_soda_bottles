@@ -46,6 +46,21 @@ cd comp_vision_for_soda_bottles/app
 pip install -r requirements.txt
 ```
 
+
+5. **Run the Application**:
+```
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+Replace `app.main:app` with the appropriate module path if your FastAPI app instance is defined elsewhere.
+
+6. **Access the Web Service**:
+Open your browser and visit [http://localhost:8000](http://localhost:8000) to interact with the application.
+
+### Note:
+- The `--reload` flag in the uvicorn command enables automatic reloading of the server when changes are detected in the code. It is useful for development but should be omitted in a production environment.
+
+
 ### How to Use:
 
 - **Home Page**: Upload a photo to see the model's prediction.
