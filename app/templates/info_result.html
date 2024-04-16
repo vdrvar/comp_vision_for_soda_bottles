@@ -43,9 +43,9 @@
 <body>
     <div class="container">
         <div class="mb-3">
-            <a class="btn btn-secondary" href="{{ url_for('home') }}">Home</a>
-            <a class="btn btn-secondary" href="{{ url_for('get_supported_classes') }}">Info</a>
-            <a class="btn btn-secondary" href="{{ url_for('get_stats') }}">Statistics</a>
+            <a class="btn btn-secondary" href="{{ request.url_for('read_root') }}">Home</a>
+            <a class="btn btn-secondary" href="{{ request.url_for('get_supported_classes') }}">Info</a>
+            <a class="btn btn-secondary" href="{{ request.url_for('get_stats') }}">Statistics</a>
         </div>
 
         <h1>Supported Classes</h1>

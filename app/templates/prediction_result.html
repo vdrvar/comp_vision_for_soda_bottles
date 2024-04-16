@@ -38,9 +38,9 @@
 <body>
     <div class="container">
         <div class="navigation">
-            <a href="{{ url_for('home') }}">Home</a> |
-            <a href="{{ url_for('get_supported_classes') }}">Info</a> |
-            <a href="{{ url_for('get_stats') }}">Statistics</a>
+            <a href="{{ request.url_for('read_root') }}">Home</a> |
+            <a href="{{ request.url_for('get_supported_classes') }}">Info</a> |
+            <a href="{{ request.url_for('get_stats') }}">Statistics</a>
         </div>
 
         {% for filename, prediction in predictions.items() %}
