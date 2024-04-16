@@ -20,12 +20,14 @@ This project demonstrates the power of transfer learning in computer vision by a
 ## Quick Start:
 
 1. **Clone the repository**:
-`git clone https://github.com/vdrvar/comp_vision_for_soda_bottles.git`
+```
+git clone https://github.com/vdrvar/comp_vision_for_soda_bottles.git
+```
 
-2. **Navigate to the Project Directory**:
-`cd comp_vision_for_soda_bottles/app`
+3. **Navigate to the Project Directory**:
+  ```cd comp_vision_for_soda_bottles/app  ```
 
-3. **Set Up the Virtual Environment** (Optional but recommended):
+4. **Set Up the Virtual Environment** (Optional but recommended):
 - For Windows:
   ```
   python -m venv env
