@@ -19,17 +19,23 @@ This project demonstrates the power of transfer learning in computer vision by a
 
 ## Quick Start:
 
-1. **Clone the repository:
+1. **Clone the repository**:
 `git clone https://github.com/vdrvar/comp_vision_for_soda_bottles.git`
-
 
 2. **Navigate to the Project Directory**:
 `cd comp_vision_for_soda_bottles/app`
-`docker build -t flask-image-service .`
-`docker run -p 5000:5000 flask-image-service`
 
-
-3. Access the web service at `http://localhost:5000`.
+3. **Set Up the Virtual Environment** (Optional but recommended):
+- For Windows:
+  ```
+  python -m venv env
+  env\Scripts\activate
+  ```
+- For macOS and Linux:
+  ```
+  python3 -m venv env
+  source env/bin/activate
+  ```
 
 ### How to Use:
 
